@@ -31,7 +31,10 @@ def predict(image):
     # for i, prob in enumerate(prediction[2]):
     # print(breedDict[i], prob)
 
-    return f"{prediction[0]}, {(accuracy * 100):.2f}%"
+    if accuracy >= 0.99:
+        return f"{prediction[0]}, {(accuracy * 100):.2f}%"
+    else:
+        return f"I'm not sure - I am {(accuracy * 100):.2f}% sure that it is a(n) {prediction[0]}."
 
     #img.show(title=f"{prediction[0]}, {(accuracy * 100):.2f}%")
 

@@ -34,7 +34,7 @@ def predict(image):
     if accuracy >= 0.99:
         return f"{prediction[0]}, {(accuracy * 100):.2f}%"
     else:
-        return f"I'm not sure - I am {(accuracy * 100):.2f}% sure that it is a(n) {prediction[0]}."
+        return f"I'm not sure - I am {(accuracy * 100):.2f}% sure that it is a {prediction[0]}."
 
     #img.show(title=f"{prediction[0]}, {(accuracy * 100):.2f}%")
 
